@@ -13,9 +13,22 @@ big-block h1 {
   display: block;
   font-weight: 800;
   text-align: center;
-  font-size:10rem;
+  font-size:7rem;
 }
 
 big-block p, big-block h1 {
   margin: 0.25em 0;
 }
+
+@media only screen and (max-width: 600px) {
+  big-block {
+    width: 100%;
+    margin: auto 5px;
+    text-align: left;
+    font-size: 1.75em;
+  }
+  
+  big-block h1 {
+    font-size:6rem;
+  }  
+} 

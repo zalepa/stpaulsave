@@ -2,24 +2,14 @@ const express = require('express');
 
 const app = express();
 
-function getDate() {
-  const pastDate = new Date(2023, 3, 12);
-  console.log(pastDate)
-  const currentDate = new Date();
-  console.log(currentDate)
-  const differenceInMs = currentDate.getTime() - pastDate.getTime();
-
-  const differenceInDays = differenceInMs / 86400000;
-
-  return Math.floor(differenceInDays);
-}
+const getDate = require('./util').getDate;
 
 app.set('view engine', 'pug');
 
+app.use(express.static('public'))
+
 app.get('/', (_, res) => {
-  const diff = getDate();
-  console.log('hello')
-  res.render('pages/home', { diff });
+  res.render('home', { diff: getDate() });
 });
 
 const port = process.env.PORT || 3000;

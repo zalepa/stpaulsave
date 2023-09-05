@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;800&display=swap");
+
+big-block {
+  display: block;
+  width: 50%;
+  margin: 3em auto;
+  font-size: 3em;
+  text-align: justify;
+  font-family: "Inter", sans-serif;
+}
+
+big-block h1 {
+  display: block;
+  font-weight: 800;
+  text-align: center;
+  font-size:10rem;
+}
+
+big-block p, big-block h1 {
+  margin: 0.25em 0;
+}

@@ -12,6 +12,10 @@ app.get('/', (_, res) => {
   res.render('home', { diff: getDate() });
 });
 
+app.get('/api', (_, res) => {
+  res.json({ days: getDate() });
+});
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {

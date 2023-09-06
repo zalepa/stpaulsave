@@ -13,6 +13,7 @@ app.get('/', (_, res) => {
     council: { date: 'April 12, 2023', days: getDate(2023, 4, 12) },
     pedestrianStruck: {date: 'Jun. 11, 2021', days: getDate(2021, 6, 11) },
     walkingAudit: {date: 'Sept. 17, 2020', days: getDate(2020, 9, 17) },
+    grandma: {date: 'Nov. 19, 2011', days: getDate(2011, 11, 19) },
   });
 });
 

@@ -1,10 +1,18 @@
-extends layout 
+extends layout
+
+mixin big-block(obj, text)
+  big-block
+    p
+      small=obj.date
+    p It has been
+    h1
+      = obj.days.toLocaleString('en-US')
+      | 
+      span= obj.days == 1 ? 'day' : 'days' 
+    p=text
+    hr
 
 block content
-  big-block
-    p It has been 
-    h1 
-      | #{diff}
-      | #{diff == 1 ? 'day' : 'days' } 
-    p 
-      | since safety improvements on St. Pauls Ave. were promised.
+  +big-block(council, 'since Jersey City promised safety improvements on St. Pauls Avenue.')
+  +big-block(pedestrianStruck, 'since a vehicle struck a pedestrian on St. Pauls Avenue triggering more calls for safety.')
+  +big-block(walkingAudit, 'since Jersey City conducted a walking audit to experience the problems on St. Pauls Avenue')

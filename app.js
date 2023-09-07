@@ -9,11 +9,11 @@ app.set('view engine', 'pug');
 app.use(express.static('public'))
 
 const DATA = [
-  { date: 'April 12, 2023', days: getDate(2023, 4, 12),  text: 'Jersey City promised safety improvements on St. Pauls Avenue.'                            },
-  { date: 'Jun. 11, 2021',  days: getDate(2021, 6, 11),  text: 'a vehicle struck a pedestrian on St. Pauls Avenue triggering more calls for safety.'      },
-  { date: 'Sept. 17, 2020', days: getDate(2020, 9, 17),  text: 'Jersey City conducted a walking audit to experience the problems on St. Pauls Avenue'     },
-  { date: 'Nov. 19, 2011',  days: getDate(2011, 11, 19), text: 'a grandmother was killed on St. Pauls Avenue while picking up her grandchild from PS 31.' },
-  // { date: 'Jul. 12, 2011',  days: getDate(2011, 7, 12),  text: 'a pedestrian was impaled on the fence at PS 31 after being struck by a vehicle.'          }
+  { date: 'April 12, 2023', days: getDate(2023, 4, 12), img: 'council.png',  text: 'Jersey City promised safety improvements on St. Pauls Avenue.'                            },
+  { date: 'Jun. 11, 2021',  days: getDate(2021, 6, 11), img: 'pedestrian.jpg', text: 'a vehicle struck a pedestrian on St. Pauls Avenue triggering more calls for safety.'      },
+  { date: 'Sept. 17, 2020', days: getDate(2020, 9, 17),  img: 'walking_audit.jpg', text: 'Jersey City conducted a walking audit to experience the problems on St. Pauls Avenue'     },
+  { date: 'Nov. 19, 2011',  days: getDate(2011, 11, 19), img: 'grandmother.jpg', text: 'a grandmother was killed on St. Pauls Avenue while picking up her grandchild from PS 31.' },
+  { date: 'Jul. 12, 2011',  days: getDate(2011, 7, 12),  img: 'impaled.jpeg', text: 'a pedestrian was impaled on the fence at PS 31 after being struck by a vehicle.'          }
 ];
 
 app.get('/', (_, res) => {

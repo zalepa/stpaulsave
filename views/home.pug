@@ -1,16 +1,20 @@
 extends layout
 
 mixin big-block(obj)
+  
   big-block
-    p
-      small=obj.date
+    p: small=obj.date
+    
     p It has been
+    
     h1
       = obj.days.toLocaleString('en-US')
       | 
       span= obj.days == 1 ? 'day' : 'days' 
+    
     p="since " + obj.text
-    hr
+    img(src=obj.img)
+      
 
 block content
   each event in events

@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap");
 
 big-block {
-  display: flex;
+  padding-top: 3em;
+  display: block;
   font-weight: 200;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
   width: 50%;
   height: 100vh;
   margin: 0 auto;
@@ -13,6 +11,15 @@ big-block {
   text-align: left;
   font-family: "Inter", sans-serif;
 }
+
+
+big-block img {
+  width:100%;
+  margin: auto;
+  filter: contrast(1) grayscale(75%) ;
+  opacity: 0.3;
+}
+
 
 big-block h1 {
   display: block;
@@ -33,7 +40,7 @@ big-block p small {
   font-size: 0.5em;
   text-transform: uppercase;
   color: rgba(125,0,0, 0.4);
-  margin: 4em auto;
+  margin: 1em auto;
 }
 
 big-block hr {
@@ -42,7 +49,7 @@ big-block hr {
   border-top: 1px solid rgba(0,0,0, 0.1);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   big-block {
     width: 100%;
     margin: 1em 5px 0px 5px;
